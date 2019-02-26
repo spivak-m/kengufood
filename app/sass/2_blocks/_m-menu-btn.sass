@@ -1,0 +1,23 @@
+.m-menu-btn
+	width: 20px
+	height: 20px
+	position: relative
+	display: none
+	line-height: 20px
+	vertical-align: middle
+	text-align: center
+	color: #c33239
+	text-decoration: none
+
+	&::before
+		content: "\f0c9"
+		font-family: Font Awesome\ 5 Free
+		font-weight: 900
+		font-size: 1.3rem
+
+	&.__menu-opened::before
+		content: "\f00d"
+
+@media screen and (max-width: 940px) 
+	.m-menu-btn
+		display: block

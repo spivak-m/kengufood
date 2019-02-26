@@ -1,0 +1,152 @@
+.form
+	width: 100%
+	color: #000
+
+.form_field-wrapper
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	margin-bottom: 20px
+
+	&:last-child
+		margin-bottom: 0
+
+.form_field-name
+	color: #000
+	font-weight: 400
+	line-height: 1
+	margin-bottom: 6px
+
+.form_text-field
+	border: 1px solid #cecece
+
+.form_text-field
+	display: block
+	width: 100%
+	padding: 9px 12px
+	border-radius: 5px
+	line-height: 1.3
+
+.form_select
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	position: relative
+
+.form_actions
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	padding-top: 10px
+
+.form_col
+	width: calc(50% - 10px)
+	margin-right: 20px
+	flex-grow: 0
+	flex-shrink: 0
+
+	&:last-child
+		margin-right: 0
+
+.form_row
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.form_field-notify
+	display: block
+	font-size: .875rem
+	color: #888
+	font-weight: 400
+	line-height: 1.3
+	text-decoration: none
+
+	&.__align-c
+		text-align: center
+
+a.form_field-notify:hover
+	text-decoration: underline
+
+.jqselect
+	width: 100%
+
+.jq-selectbox__select
+	background-color: #fff
+	border: 1px solid #cecece
+	border-radius: 5px
+	width: 100%
+	padding: 9px 12px
+	font-size: 1rem
+	line-height: 1.3
+	max-height: 40px
+	color: #888
+	cursor: pointer
+
+.jq-selectbox__trigger
+	position: absolute
+	width: 40px
+	height: 40px
+	top: 0
+	right: 0
+
+.jq-selectbox__trigger-arrow
+	width: 100%
+	height: 100%
+	position: relative
+
+	&::before,
+	&::after
+		content: ""
+		display: block
+		width: 10px
+		height: 3px
+		background-color: #888
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-left: -8px
+		margin-top: -1px
+		border-radius: 3px
+
+	&::before
+		transform: rotate(-45deg)
+		margin-left: -2px
+
+	&::after
+		transform: rotate(45deg)
+
+.jq-selectbox__dropdown
+	background-color: #fff
+	border: 1px solid #cecece
+	border-radius: 5px
+	width: 100%
+	color: #888
+
+	ul
+		margin: 0
+		padding: 0
+
+		li
+			padding: 10px 15px
+			cursor: pointer
+
+			&:hover
+				background-color: #f3f3f3
+
+.jq-selectbox li.selected 
+	background-color: #f3f3f3
+
+@media screen and (max-width: 940px)
+	.form
+		font-size: 1.142rem
+
+	.form_field-notify
+		font-size: 1rem

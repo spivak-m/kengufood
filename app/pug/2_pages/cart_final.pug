@@ -1,0 +1,35 @@
+extends ../0_base/template
+
+block title
+	title Корзина
+
+block content
+	.l-wrapper.__w-810
+		.order-accepted
+			.order-accepted_title Заказ №420 принят
+			.order-accepted_text.
+				Наши повара уже начали готовить ваш заказ.<br>
+				Рады, что вы с нами!
+
+			ul.order-accepted_info
+				li.order-accepted_info-item
+					span Приготовить к
+					b Как можно скорее
+				li.order-accepted_info-item
+					span Адрес доставки
+					b ул. Советская площадь, д. 5, кв. 207
+				li.order-accepted_info-item
+					span К оплате
+					b 2 585 <i class="fas fa-ruble-sign"></i>
+
+		.content-block
+			.content-block_header
+				b.content-block_title Состав заказа
+
+			.content-block_content.__no-pdg
+				+cartCardFin()
+				+cartCardFin()
+				+cartCardFin()
+				+cartCardFin()
+
+		

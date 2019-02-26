@@ -1,0 +1,57 @@
+.user-block
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.user-block_item
+	min-width: 40px
+	margin-right: 18px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	text-decoration: none
+	color: inherit
+
+	&:last-child
+		margin-right: 0
+
+.user-block_item i
+	color: #c33239
+	font-size: 1.125rem
+
+.user-block_cart-info
+	padding-left: 20px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	line-height: 1.2
+
+.user-block_cart-price
+	font-weight: 700
+
+.user-block_cart-price i
+	color: inherit
+	font-size: .8em
+
+.user-block_cart-items
+	color: #888
+
+@media screen and (max-width: 940px)
+	.user-block_item
+		display: none
+		min-width: initial
+
+		&.__cart
+			display: block
+	
+	.user-block_cart-info
+		display: none

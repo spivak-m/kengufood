@@ -1,0 +1,110 @@
+.m-menu
+	position: fixed
+	top: 57px
+	bottom: 0
+	left: 0
+	right: 0
+	overflow-y: auto
+	padding: 0 10px 30px
+	background-color: #fff
+	display: none
+	flex-direction: column
+	align-items: center
+	z-index: 899
+	border-bottom: 1px solid #ececec
+	box-shadow: 0 3px 10px -5px
+
+	&.__is-show
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+
+.m-menu_list
+	width: 100%
+	list-style: none
+	padding: 0
+	margin: 0
+	margin-bottom: 20px
+
+.m-menu_list-item
+	font-size: 1.142rem
+	line-height: 1
+	border-bottom: 1px solid #ececec
+	color: #000
+
+	a
+		display: block
+		padding: 17px 0
+		color: inherit
+		text-decoration: none
+
+.m-menu_info
+	list-style: none
+	padding: 35px 10px 30px
+	margin: 0
+	width: 100%
+	border: 1px solid #ececec
+	border-radius: 10px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: center
+	color: #888
+	position: relative
+	flex-shrink: 0
+
+	&::before
+		content: ""
+		display: block
+		width: 40px
+		height: 40px
+		border: 3px solid #fff
+		position: absolute
+		top: 0
+		left: 50%
+		margin-top: -20px
+		margin-left: -20px
+		background-color: #f5f5f5
+		border-radius: 50%
+		line-height: 35px
+		vertical-align: middle
+		text-align: center
+		font-family: Font Awesome\ 5 Free
+		font-weight: 900
+		font-size: 1.142rem
+
+	&.__first
+		margin-top: 50px
+
+		&::before
+			content: "\f3c5"
+
+	&.__second
+		margin-top: 40px
+
+		&::before
+			content: "\f017"
+			font-weight: 400
+
+.m-menu_info-item
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin-bottom: 10px
+
+	&:last-child
+		margin-bottom: 0
+
+	b
+		color: #000
+		font-size: 1.285rem
+		font-weight: 400

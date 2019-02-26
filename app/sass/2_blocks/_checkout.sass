@@ -1,0 +1,222 @@
+.checkout
+	position: sticky
+	top: 0
+
+	.content-block
+		margin-bottom: 10px
+
+.checkout_info
+	margin: 0
+	padding: 0
+	list-style: none
+	color: #888
+	line-height: 1.3
+	margin-bottom: 20px
+
+.checkout_info-item
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	padding-left: 35px
+	margin-bottom: 10px
+	position: relative
+
+	&::before
+		position: absolute
+		top: 0
+		left: 0
+		color: #000
+		font-size: 1.2rem
+
+	&.__courier::before
+		content: "\f48b"
+		font-family: Font Awesome\ 5 Free
+		font-weight: 900
+
+	&.__self::before
+		content: "\f3c5"
+		font-family: Font Awesome\ 5 Free
+		font-weight: 900
+
+	&.__pay::before
+		content: "\f09d"
+		font-family: Font Awesome\ 5 Free
+		font-weight: 900
+
+	&:last-child
+		margin-bottom: 0
+
+	b
+		font-size: 1.125rem
+		color: #000
+
+	i
+		font-size: .7em
+
+.checkout_totals
+	margin: 0
+	padding: 0
+	padding-top: 18px
+	list-style: none
+	width: 100%
+	position: relative
+	color: #888
+	line-height: 1.5
+
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 1px
+		margin-right: -20px
+		margin-left: -20px
+		background-color: #ececec
+
+.checkout_totals-item
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	width: 100%
+
+	&:last-child
+		padding-top: 10px
+		font-size: 1.125rem
+		font-weight: 700
+		color: #000
+
+.checkout_totals-name
+	margin-right: auto
+	padding-right: 10px
+
+.checkout_totals-price
+	color: #000
+
+	i
+		font-size: .7em
+
+	&.__green
+		color: #35c332
+
+	&.__red
+		color: #c33239
+
+.checkout_promocode
+	position: relative
+	width: 100%
+	padding-right: 15px
+	margin-bottom: 20px
+
+.checkout_promocode-submit
+	position: absolute
+	top: 0
+	right: 0
+	width: 40px
+	height: 40px
+	border-radius: 50%
+	background-color: #c33239
+	border: none
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	color: #fff
+
+.checkout_promocode-input
+	padding-top: 10px
+	padding-bottom: 9px
+
+.checkout_products
+	padding: 0
+	margin: 0
+	margin-bottom: 20px
+	list-style: none
+
+.checkout_product
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	margin-bottom: 10px
+
+	&:last-child
+		margin-bottom: 0
+
+.checkout_product-img
+	max-width: 60px
+	width: 100%
+	margin-right: 20px
+	flex-shrink: 0
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	line-height: 0
+
+.checkout_product-info
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	flex-grow: 1
+	line-height: 1.3
+
+.checkout_product-price
+	font-size: 1.25rem
+
+	i
+		font-size: .7em
+
+.checkout_product-quantity
+	color: #888
+	font-size: .875rem
+
+@media screen and (max-width: 940px)
+	.checkout_info-item
+		b
+			font-size: 1.285rem
+
+		span
+			font-size: 1.142rem
+
+	.checkout_totals
+		&::before
+			margin-right: -10px
+			margin-left: -10px
+
+	.checkout_totals-item
+		font-size: 1.142rem
+
+		&:last-child
+			font-size: 1.285rem
+
+	.checkout_product
+		font-size: 1rem
+
+	.checkout_product-name
+		font-size: 1.142rem
+
+	.checkout_product-price
+		font-size: 1.428rem
+
+	.checkout_product-quantity
+		font-size: 1rem

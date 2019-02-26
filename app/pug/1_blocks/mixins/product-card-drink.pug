@@ -1,0 +1,26 @@
+mixin productDrink()
+	article.product-card&attributes(attributes)
+		.product-card_img
+			img(src="media/img-p/item-3.jpg", alt="Какой-то товар")
+		
+		.product-card_content-wrapper
+			.product-card_header
+				b.product-card_title Стакан воды
+
+			.product-card_actions
+				.product-card_options-toggle
+					.product-card_option
+						input(type="radio" name="cup-size-1" checked id="cup-size-1_1")
+						label(for="cup-size-1_1") 0.2л
+					.product-card_option
+						input(type="radio" name="cup-size-1" id="cup-size-1_2")
+						label(for="cup-size-1_2") 0.3л
+					.product-card_option
+						input(type="radio" name="cup-size-1" id="cup-size-1_3")
+						label(for="cup-size-1_3") 0.5л
+					.product-card_option
+						input(type="radio" name="cup-size-1" id="cup-size-1_4")
+						label(for="cup-size-1_4") 0.8л
+			
+				.product-card_coast 99.99 <i class="fas fa-ruble-sign"></i>
+				a(href="#").btn В корзину

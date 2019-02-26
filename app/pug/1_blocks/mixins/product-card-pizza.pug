@@ -1,0 +1,16 @@
+mixin productPizza()
+	article.product-card&attributes(attributes)
+		.product-card_img
+			img(src="media/img-p/item-4.jpg", alt="Какой-то товар")
+
+		.product-card_content-wrapper
+			.product-card_header
+				b.product-card_title Пицца с грибами
+				span.product-card_info Вес 470&#177;50 гр.
+
+			p.product-card_description.
+				Тесто, сыр, грибы
+
+			.product-card_actions
+				.product-card_coast 333 <i class="fas fa-ruble-sign"></i>
+				a(href="#").btn В корзину

@@ -1,0 +1,65 @@
+.spinner
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	width: 100%
+	max-width: 110px
+	border: 2px solid rgba(206, 206, 206, .6)
+	border-radius: 20px
+	color: #888
+	overflow: hidden
+
+.spinner_decrement,
+.spinner_increment
+	font-weight: 700
+	text-decoration: none
+	color: inherit
+	width: calc(100% / 3)
+	line-height: 1
+	position: relative
+	-webkit-appearance: none
+	appearance: none
+
+	&::before
+		content: ""
+		display: block
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translateX(-50%) translateY(-50%)
+
+	&.__is-disabled
+		opacity: .6
+		pointer-events: none
+
+.spinner_decrement::before
+	content: "-"
+
+.spinner_increment::before
+	content: "+"
+
+.spinner_viewport
+	width: calc(100% / 3)
+	text-align: center
+	line-height: 1
+	color: inherit
+	font-weight: 700
+	border: none
+	padding-top: 8px
+	padding-bottom: 9px
+	
+	&:disabled
+		background-color: #fff
+		color: #888
+		opacity: 1
+
+@media screen and (max-width: 940px)
+	.spinner
+		max-width: 90px
+
+	.spinner_viewport
+		padding-top: 8px
+		padding-bottom: 6px
+

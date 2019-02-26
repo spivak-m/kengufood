@@ -1,0 +1,156 @@
+.site-foo
+	background-color: #262626
+	color: #888
+	overflow-x: hidden
+
+.site-foo_first
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	padding: 60px 20px
+
+.site-foo_second
+	padding: 26px 20px
+	border-top: 1px solid #4d4d4d
+
+.site-foo_col
+	text-align: center
+
+	&:first-child
+		width: 280px
+
+.site-foo_logo
+	display: block
+	width: 143px
+	margin: 0 auto
+	margin-bottom: 15px
+	line-height: 0
+
+.site-foo_text
+	margin: 0
+	margin-bottom: 20px
+	padding: 0 20px
+
+.site-foo_copyright
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	font-size: .875rem
+	justify-content: space-between
+	width: 100%
+
+	a
+		color: inherit
+
+.site-foo_info
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.site-foo_info-col
+	list-style: none
+	margin: 0
+	margin-right: 25px
+	width: 250px
+	padding: 0
+	padding-left: 60px
+	text-align: left
+	position: relative
+
+	&::before
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		display: block
+		width: 40px
+		height: 40px
+		line-height: 40px
+		background-color: rgba(136,136,136,.1)
+		border-radius: 50%
+		font-family: Font Awesome\ 5 Free
+		font-weight: 900
+		text-align: center
+
+	&:first-child::before
+		content: "\f3c5"
+
+	&:nth-child(2)::before
+		content: "\f017"
+		font-weight: 400
+
+.site-foo_info-item
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	margin-bottom: 20px
+
+	&:last-child
+		margin-bottom: 0
+
+	span
+		font-size: 1rem
+		color: #888
+		margin-bottom: 6px
+
+	b
+		font-size: 1.25rem
+		line-height: 1.2
+		color: #fff
+		font-weight: 400
+		-webkit-font-smoothing: antialiased
+
+	a
+		color: inherit
+		text-decoration: none
+
+@media screen and (max-width: 940px)
+	.site-foo_first
+		flex-direction: column
+		padding: 0
+		border-bottom: none
+
+	.site-foo_second
+		border-top: none
+		padding: 18px 12px
+
+	.site-foo_col:nth-child(n+1)
+		width: 100%
+		padding: 18px 12px
+		border-bottom: 1px solid #515151
+
+	.site-foo_logo
+		width: 145px
+
+	.site-foo_info
+		flex-direction: column
+
+	.site-foo_info-col
+		margin-bottom: 15px
+
+		&::before
+			font-size: 1.142rem
+
+		&:last-child
+			margin-bottom: 0
+
+	.site-foo_info-item
+		margin-bottom: 10px
+
+		b
+			font-size: 1.285rem
+
+	.site-foo_copyright
+		flex-direction: column
+		align-items: center
+		font-size: 1rem

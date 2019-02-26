@@ -1,0 +1,123 @@
+.l-wrapper
+	width: 100%
+	margin: 0 auto
+	padding-top: 50px
+	padding-bottom: 100px
+
+	&.__w-810
+		max-width: 810px
+
+	&.__w-1165
+		max-width: 1165px
+
+.l-section
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+
+.l-section_header
+	width: 100%
+	padding: 45px 20px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+
+.l-section_item-list
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+
+	@media screen and (min-width: 720px)
+
+		&.__info .l-section_item
+			width: 100%
+
+	@media screen and (min-width: 940px)
+
+		&.__info .l-section_item
+			width: calc(100% / 4)
+
+.l-section_item
+	width: 100%
+	border: 1px solid #f3f3f3
+	border-left: none
+	margin-top: -1px // FOR TOP BORDER COLLAPSE
+
+	&:nth-child(1n+1)
+		border-right: none
+
+	@media screen and (min-width: 720px)
+		width: calc(100% / 2)
+
+		&:nth-child(n+1)
+			border-right: 1px solid #f3f3f3
+
+		&:nth-child(2n+2)
+			border-right: 1px solid #f3f3f3
+
+	@media screen and (min-width: 1024px)
+		width: calc(100% / 3)
+
+		&:nth-child(3n+3)
+			border-right: 1px solid #f3f3f3
+
+	@media screen and (min-width: 1280px)
+		width: calc(100% / 4)
+
+		&:nth-child(4n+4)
+			border-right: 1px solid #f3f3f3
+
+	@media screen and (min-width: 1440px)
+		width: calc(100% / 5)
+
+		&:nth-child(5n+5)
+			border-right: 1px solid #f3f3f3
+
+	@media screen and (min-width: 1920px)
+		width: calc(100% / 6)
+
+		&:nth-child(6n+6)
+			border-right: 1px solid #f3f3f3
+
+.l-cart-page
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.l-cart-page_content
+	flex-grow: 1
+
+.l-cart-page_aside
+	width: calc(29% - 20px)
+	margin-left: 20px
+	flex-shrink: 0
+
+@media screen and (max-width: 940px)
+	.l-wrapper
+		padding-top: 30px
+		padding-bottom: 45px
+
+	.l-section_header
+		padding: 28px 12px
+
+	.l-cart-page
+		flex-direction: column
+
+	.l-cart-page_aside
+		width: 100%
+		margin-left: 0
+
+	.l-cart-page_content
+		margin-bottom: 30px

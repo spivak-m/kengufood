@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Корзина</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/libs/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="css/libs/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/libs/owl.theme.custom.min.css"/>
+    <script src="js/libs/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@1.7.8/jquery.formstyler.min.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header_m-menu-btn"><a class="m-menu-btn js-m-menu-btn" href="#m-menu"></a></div>
+      <div class="site-header_logo"><img src="media/img/site-logo.png" alt="Логотип сайта"/></div>
+      <div class="site-header_nav">
+        <nav class="site-nav">
+          <ul class="site-nav_list">
+            <li class="site-nav_item"><a href="#">Бургеры</a></li>
+            <li class="site-nav_item"><a href="#">Пицца</a></li>
+            <li class="site-nav_item"><a href="#">Десерты</a></li>
+            <li class="site-nav_item"><a href="#">Напитки</a></li>
+            <li class="site-nav_item"><a href="#">Акции</a></li>
+            <li class="site-nav_item"><a href="#">Доставка</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-header_tel"><span>Номер для заказов</span><a>+7 (342) 429-92-66</a></div>
+      <div class="site-header_user-block">
+        <div class="user-block"><a class="user-block_item" href="#"><i class="fas fa-search"></i></a><a class="user-block_item mopen" href="#sign-in"><i class="fas fa-user-alt"></i></a><a class="user-block_item __cart" href="cart.html"><i class="fas fa-shopping-cart"></i>
+            <div class="user-block_cart-info"><span class="user-block_cart-price">2 685 <i class="fas fa-ruble-sign"></i></span><span class="user-block_cart-items">10 товаров</span></div></a></div>
+      </div>
+      <div class="m-menu" id="m-menu">
+        <ul class="m-menu_list">
+          <li class="m-menu_list-item"><a href="#">Kengu Food</a></li>
+          <li class="m-menu_list-item"><a href="#">Акции</a></li>
+          <li class="m-menu_list-item"><a href="#">Контакты</a></li>
+          <li class="m-menu_list-item"><a href="#">О нас</a></li>
+        </ul><a class="btn __solid __align-c mopen" href="#sign-in">Личный кабинет</a>
+        <ul class="m-menu_info __first">
+          <li class="m-menu_info-item"><span>Готовим заказы по адресу</span><b>г. Березники, пр. Ленина, 71</b></li>
+        </ul>
+        <ul class="m-menu_info __second">
+          <li class="m-menu_info-item"><span>Номер для заказов</span><b>+7 (999) 999-99-99</b></li>
+          <li class="m-menu_info-item"><span>Работаем для вас</span><b>с 8:00 до 21:00</b></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="l-wrapper __w-810">
+        <div class="order-accepted">
+          <div class="order-accepted_title">Заказ №420 принят</div>
+          <div class="order-accepted_text">
+            Наши повара уже начали готовить ваш заказ.<br>
+            Рады, что вы с нами!
+            
+          </div>
+          <ul class="order-accepted_info">
+            <li class="order-accepted_info-item"><span>Приготовить к</span><b>Как можно скорее</b></li>
+            <li class="order-accepted_info-item"><span>Адрес доставки</span><b>ул. Советская площадь, д. 5, кв. 207</b></li>
+            <li class="order-accepted_info-item"><span>К оплате</span><b>2 585 <i class="fas fa-ruble-sign"></i></b></li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <div class="content-block_header"><b class="content-block_title">Состав заказа</b></div>
+          <div class="content-block_content __no-pdg">
+              <div class="cart-card">
+                <div class="cart-card_img"><img src="media/img-p/item-1.jpg" alt=""/></div>
+                <div class="cart-card_content">
+                  <div class="cart-card_info"><b class="cart-card_name">Бургер</b><span class="cart-card_detail">Вес 0.5 кг</span></div>
+                  <ul class="cart-card_totals">
+                    <li class="cart-card_total"><span>Цена</span><b>190 <i class="fas fa-ruble-sign"></i></b></li>
+                    <li class="cart-card_total"><span>Кол-во</span><b>10</b></li>
+                    <li class="cart-card_total"><span>Сумма</span><b>1900 <i class="fas fa-ruble-sign"></i></b></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cart-card">
+                <div class="cart-card_img"><img src="media/img-p/item-1.jpg" alt=""/></div>
+                <div class="cart-card_content">
+                  <div class="cart-card_info"><b class="cart-card_name">Бургер</b><span class="cart-card_detail">Вес 0.5 кг</span></div>
+                  <ul class="cart-card_totals">
+                    <li class="cart-card_total"><span>Цена</span><b>190 <i class="fas fa-ruble-sign"></i></b></li>
+                    <li class="cart-card_total"><span>Кол-во</span><b>10</b></li>
+                    <li class="cart-card_total"><span>Сумма</span><b>1900 <i class="fas fa-ruble-sign"></i></b></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cart-card">
+                <div class="cart-card_img"><img src="media/img-p/item-1.jpg" alt=""/></div>
+                <div class="cart-card_content">
+                  <div class="cart-card_info"><b class="cart-card_name">Бургер</b><span class="cart-card_detail">Вес 0.5 кг</span></div>
+                  <ul class="cart-card_totals">
+                    <li class="cart-card_total"><span>Цена</span><b>190 <i class="fas fa-ruble-sign"></i></b></li>
+                    <li class="cart-card_total"><span>Кол-во</span><b>10</b></li>
+                    <li class="cart-card_total"><span>Сумма</span><b>1900 <i class="fas fa-ruble-sign"></i></b></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cart-card">
+                <div class="cart-card_img"><img src="media/img-p/item-1.jpg" alt=""/></div>
+                <div class="cart-card_content">
+                  <div class="cart-card_info"><b class="cart-card_name">Бургер</b><span class="cart-card_detail">Вес 0.5 кг</span></div>
+                  <ul class="cart-card_totals">
+                    <li class="cart-card_total"><span>Цена</span><b>190 <i class="fas fa-ruble-sign"></i></b></li>
+                    <li class="cart-card_total"><span>Кол-во</span><b>10</b></li>
+                    <li class="cart-card_total"><span>Сумма</span><b>1900 <i class="fas fa-ruble-sign"></i></b></li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-foo">
+      <div class="site-foo_first">
+        <div class="site-foo_col"><a class="site-foo_logo" href="index.html"><img src="media/img/site-logo.png" alt=""/></a>
+          <p class="site-foo_text">
+            Ресторан доставки быстрого
+            питания в городе Березники.
+            Доставка в течение часа.
+            
+          </p>
+          <div class="site-foo_social">
+            <div class="social"><a class="social_item" href="#"><i class="fab fa-vk"></i></a><a class="social_item" href="#"><i class="fab fa-instagram"></i></a><a class="social_item" href="#"><i class="fas fa-at"></i></a></div>
+          </div>
+        </div>
+        <div class="site-foo_col">
+          <nav class="site-nav __at-foo">
+            <ul class="site-nav_list">
+              <li class="site-nav_item"><a href="#">Меню</a></li>
+              <li class="site-nav_item"><a href="#">Бургеры</a></li>
+              <li class="site-nav_item"><a href="#">Пицца</a></li>
+              <li class="site-nav_item"><a href="#">Десерты</a></li>
+              <li class="site-nav_item"><a href="#">Напитки</a></li>
+            </ul>
+            <ul class="site-nav_list">
+              <li class="site-nav_item"><a href="#">Kengu Food</a></li>
+              <li class="site-nav_item"><a href="#">О нас</a></li>
+              <li class="site-nav_item"><a href="#">Акции</a></li>
+              <li class="site-nav_item"><a href="#">Вакансии</a></li>
+              <li class="site-nav_item"><a href="#">Доставка и оплата</a></li>
+              <li class="site-nav_item"><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="site-foo_col">
+          <div class="site-foo_info">
+            <ul class="site-foo_info-col">
+              <li class="site-foo_info-item"><span>Готовим заказы по адресу</span><b>г. Березники, пр. Ленина, 71</b></li>
+            </ul>
+            <ul class="site-foo_info-col">
+              <li class="site-foo_info-item"><span>Номер для заказов</span><b><a href="#">+7 (999) 999-99-99</a></b></li>
+              <li class="site-foo_info-item"><span>Работаем для вас</span><b>с 8:00 до 21:00</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="site-foo_second">
+        <div class="site-foo_copyright"><span>&#169; 2017-2018г. Все права Защищены.</span><span>Разработка сайта <a href="#">PROSTOR design</a></span></div>
+      </div>
+    </footer>
+    <div class="modal">
+      <div class="modal_container __sign-in" id="sign-in">
+        <div class="modal_content">
+          <h2 class="section-title __at-modal">Вход на сайт</h2>
+          <p>
+            Просматривайте историю своих покупок 
+            и добавляйте любимые адреса, чтобы не 
+            указывать их в следующий раз
+            
+          </p>
+          <form class="form" action="#" method="post">
+            <div class="form_field-wrapper">
+              <label class="form_field-name" for="tel">Номер телефона</label>
+              <input class="form_text-field" type="text" name="tel" id="tel" placeholder="+7 999 999-99-99"/><a class="form_field-notify" href="#">Указать другой номер</a>
+            </div>
+            <div class="form_field-wrapper">
+              <label class="form_field-name" for="tel">Код подтверждения</label>
+              <input class="form_text-field" type="text" name="tel" id="tel"/><a class="form_field-notify" href="#">Отправить еще раз через <b>50</b> сек</a>
+            </div>
+            <div class="form_actions">
+              <button class="btn __solid __align-c" type="submit">Продолжить</button>
+            </div>
+          </form>
+        </div><a class="modal_close" href="#"></a>
+      </div>
+      <div class="modal_overlay"></div>
+    </div>
+    <div class="cart-notify __is-show js-cartNotify">
+      <div class="cart-notify_img"><img src="media/img-p/item-1.jpg" alt=""/></div>
+      <div class="cart-notify_info"><b class="cart-notify_product-name">Чикенбургер</b><span class="cart-notify_msg">добавлен в корзину</span><a class="cart-notify_to-cart" href="#">Перейти к корзине</a></div><a class="cart-notify_close" href="#"></a>
+    </div>
+    <script src="js/libs/modal.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+.product-card
+	padding: 0 20px 20px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	height: 100%
+	color: #888
+
+	&.__new .product-card_header::before,
+	&.__top .product-card_header::before,
+	&.__sale .product-card_header::before
+		content: ""
+		display: block
+		position: absolute
+		top: 3px
+		padding: 6px 6px 4px
+		border-radius: 5px
+		font-size: .687rem
+		color: #fff
+		line-height: 1
+		font-weight: 700
+		text-transform: uppercase
+		letter-spacing: 1px
+
+	&.__new .product-card_header::before
+		content: "новинка"
+		background-color: #c33239
+
+	&.__top .product-card_header::before
+		content: "хит продаж"
+		background-color: #35c332
+
+	&.__sale .product-card_header::before
+		content: "скидка"
+		background-color: #324dc3
+
+.product-card_img
+	width: 100%
+	height: 200px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+
+	img
+		width: initial
+		height: initial
+		max-height: 100%
+
+.product-card_content-wrapper
+	flex-grow: 1
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+.product-card_header
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	margin-bottom: 10px
+	position: relative
+	padding-top: 25px
+
+.product-card_title
+	font-size: 1.25rem
+	line-height: 1.1
+	font-weight: 500
+	color: #000
+
+.product-card_description
+	width: 100%
+	margin: 0
+	margin-bottom: 15px
+	line-height: 1.2
+
+.product-card_actions
+	width: 100%
+	padding-top: 10px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	margin-top: auto
+
+.product-card_coast
+	margin-right: auto
+	font-size: 1.5rem
+	line-height: 1
+	font-weight: 700
+	color: #000
+
+	i
+		font-size: 1rem
+
+.product-card_options-toggle
+	margin-bottom: 20px
+	background-color: #f8f8f8
+	border-radius: 5px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	font-size: .875rem
+	line-height: 1
+	color: #888
+	width: 100%
+
+.product-card_option
+	text-align: center
+	flex-grow: 1
+	text-decoration: none
+	color: inherit
+
+	input
+		display: none
+
+	label
+		display: block
+		padding: 4px 10px
+		cursor: pointer
+	
+	input:checked ~ label
+		border: 1px solid #888
+		color: #000
+		background-color: #fff
+		border-radius: 5px
+		padding: 3px 9px
+
+@media screen and (max-width: 940px)
+	.product-card
+		flex-direction: row
+		padding: 10px
+
+		&.__new .product-card_header::before,
+		&.__top .product-card_header::before,
+		&.__sale .product-card_header::before
+			position: static
+			font-size: .714rem
+			padding: 5px 6px 3px
+			vertical-align: middle
+
+	.product-card_img
+		width: calc(35% - 10px)
+		max-width: 150px
+		height: auto
+		flex-shrink: 0
+		align-items: flex-start
+		margin-right: 10px
+		margin-bottom: 0
+
+		img
+			width: 100%
+			height: auto
+
+	.product-card_header
+		margin-bottom: 6px
+		padding-top: 0
+		align-items: flex-start
+
+	.product-card_title
+		font-size: 1.142rem
+		line-height: 1.5
+
+	.product-card_coast
+		font-size: 1.285rem
+
+		i
+			font-size: .7em
+
+	.product-card_actions
+		padding-top: 0
+
+	.product-card_options-toggle
+		font-size: 1rem

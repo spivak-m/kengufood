@@ -1,0 +1,35 @@
+.social
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+
+.social_item
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 40px
+	height: 40px
+	margin-right: 10px
+	text-decoration: none
+	color: inherit
+	line-height: 1
+	font-size: 1rem
+	background-color: rgba(136,136,136,.1)
+	border-radius: 50%
+
+	&:last-child
+		margin-right: 0
+
+	&:hover
+		opacity: .8
+
+@media screen and (max-width: 940px)
+	.social_item
+		font-size: 1.142rem

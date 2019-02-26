@@ -1,0 +1,35 @@
+header.site-header
+	.site-header_m-menu-btn
+		a(href="#m-menu").m-menu-btn.js-m-menu-btn
+
+	.site-header_logo
+		img(src="media/img/site-logo.png", alt="Логотип сайта")
+
+	.site-header_nav
+		nav.site-nav
+			ul.site-nav_list
+				li.site-nav_item: a(href="#") Бургеры
+				li.site-nav_item: a(href="#") Пицца
+				li.site-nav_item: a(href="#") Десерты
+				li.site-nav_item: a(href="#") Напитки
+				li.site-nav_item: a(href="#") Акции
+				li.site-nav_item: a(href="#") Доставка
+
+	.site-header_tel
+		span Номер для заказов
+		a +7 (342) 429-92-66
+
+	.site-header_user-block
+		.user-block
+			a(href="#").user-block_item
+				<i class="fas fa-search"></i>
+			a(href="#sign-in").user-block_item.mopen
+				<i class="fas fa-user-alt"></i>
+			a(href="cart.html").user-block_item.__cart
+				<i class="fas fa-shopping-cart"></i>
+
+				.user-block_cart-info
+					span.user-block_cart-price 2 685 <i class="fas fa-ruble-sign"></i>
+					span.user-block_cart-items 10 товаров
+	
+	include ../1_blocks/modals/m-menu

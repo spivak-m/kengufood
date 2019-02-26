@@ -1,0 +1,50 @@
+.btn
+	display: inline-block
+	padding: 11px 17px
+	color: #c33239
+	border: 2px solid rgba(195, 50, 57, 0.6)
+	border-radius: 50px
+	text-decoration: none
+	font-weight: 700
+	line-height: 1
+	transition: .2s
+	text-align: center
+	cursor: pointer
+	background-color: #fff
+
+	&.__align-c
+		margin-right: auto
+		margin-left: auto
+
+	&.__solid,
+	&:hover
+		background-color: #c33239
+		border-color: #c33239
+		color: #fff
+
+	&.__solid:hover
+		opacity: .9
+
+	&.__like-link
+		padding: 0
+		border: none
+		color: #c33239
+
+		&:hover
+			background-color: initial
+			color: #c33239
+
+	&.__w-100p
+		width: 100%
+
+@media screen and (max-width: 940px)
+	.btn
+		padding: 9px 18px 7px
+
+		&.__solid
+			font-size: 1.142rem
+			padding-top: 11px
+			padding-bottom: 10px
+
+		&.__m-w100p
+			width: 100%

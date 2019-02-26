@@ -1,0 +1,186 @@
+extends ../0_base/template
+
+block title
+	title Корзина
+
+block content
+	.l-wrapper.__w-1165.l-cart-page
+		.l-cart-page_content
+			form(action="#" method="post" id="order-form").form
+				.content-block
+					.content-block_header
+						b.content-block_title Информация о заказе
+
+					.content-block_content
+						.recipient-form
+							.form_field-wrapper
+								label(for="recipient-name").form_field-name Имя
+								input(type="text" name="recipient-name" placeholder="Имя получателя" id="recipient-name").form_text-field
+
+							.form_field-wrapper
+								label(for="recipient-tel").form_field-name Номер телефона
+								input(type="tel" name="recipient-tel" placeholder="+7 999 999-99-99" id="recipient-tel" disabled).form_text-field
+								a(href="#").form_field-notify Указать другой номер телефона
+
+							.form_field-wrapper.recipient-form_coocking-time
+								b.form_field-name Приготовить
+								.form_select-wrapper
+									select(name="cooking-time").form_select
+										option(value="fast") Как можно скорее
+										option(value="fast") Как можно дольше
+								
+
+				.content-block
+					.content-block_header
+						b.content-block_title Способ доставки
+
+					.content-block_content
+						.delivery-choise.js-form-tabs
+							input(type="hidden" name="delivery-choise" value="courier")
+							a(href="#delivery-courier" data-value="courier").delivery-choise_variant.__courier.__is-active
+								b Доставка курьером
+								span Среднее время доставки заказа составляет 1 час
+							a(href="#delivery-self" data-value="self").delivery-choise_variant.__self
+								b Самовывоз
+								span г. Березники, ул. Ленина, 71 <br>08:00 – 21:00
+
+						.delivery-form#delivery-courier
+							.delivery-form_row
+								.form_field-wrapper.delivery-form_field.__3-4.__m-1-1
+									label(for="delivery-street").form_field-name Улица
+									input(type="text" name="delivery-street" placeholder="Напишите название улицы" id="delivery-street").form_text-field
+								.form_field-wrapper.delivery-form_field.__1-4.__m-1-2
+									label(for="delivery-house").form_field-name Дом
+									input(type="text" name="delivery-house" placeholder="Номер дома" id="delivery-house").form_text-field
+
+							.delivery-form_row
+								.form_field-wrapper.delivery-form_field.__1-4.__m-1-2
+									label(for="delivery-apartment").form_field-name Квартира
+									input(type="text" name="delivery-apartment" placeholder="№ квартиры" id="delivery-apartment").form_text-field
+								.form_field-wrapper.delivery-form_field.__1-4.__m-1-2
+									label(for="delivery-entrance").form_field-name Подъезд
+									input(type="text" name="delivery-entrance" placeholder="Номер подъезда" id="delivery-entrance").form_text-field
+									span.form_field-notify Необязательное поле
+								.form_field-wrapper.delivery-form_field.__1-4.__m-1-2
+									label(for="delivery-door-code").form_field-name Код двери
+									input(type="text" name="delivery-door-code" placeholder="Код домофона" id="delivery-door-code").form_text-field
+									span.form_field-notify Необязательное поле
+								.form_field-wrapper.delivery-form_field.__1-4.__m-1-2
+									label(for="delivery-floor").form_field-name Этаж
+									input(type="text" name="delivery-floor" placeholder="Номер этажа" id="delivery-floor").form_text-field
+									span.form_field-notify Необязательное поле
+
+							.form_field-wrapper.delivery-form_field.__1-1.__m-1-1
+								label(for="delivery-comment").form_field-name Комментарий
+								textarea(rows="6" name="delivery-comment" placeholder="Комментарий к заказу" id="delivery-comment").form_text-field
+								span.form_field-notify Необязательное поле
+						
+						#delivery-self
+							p.
+								Вы можете сами забрать заказ, по адресу: г. Березники, ул. Ленина 71.<br>
+								Мы работаем ежедневно с 08:00 до 21:00
+
+							.map
+								iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8116.463079891009!2d56.8057862!3d59.4311437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xadfe940d71e8899e!2z0KLQpiDQmtC10L3Qs9GD!5e0!3m2!1sru!2sru!4v1542872717546" width="600" height="400" frameborder="0" style="border:0" allowfullscreen)
+
+				.content-block
+					.content-block_header
+						b.content-block_title Способ оплаты
+
+					.content-block_content
+						.payment-choise.js-form-tabs
+							input(type="hidden" name="payment-choise" value="online")
+							a(href="#payment-online" data-value="online").payment-choise_variant.__online.__is-active
+								b Картой на сайте
+								span Оплатите заказ на сайте
+							a(href="#payment-offline" data-value="offline").payment-choise_variant.__offline
+								b Наличные
+								span Наличными курьеру
+							a(href="#payment-card" data-value="card").payment-choise_variant.__card
+								b Картой курьеру
+								span Оплата картой курьеру
+						
+						.payment-choise_content
+							.payment-form#payment-online
+								.payment-form_col
+									.form_field-wrapper.payment-form_card-num
+										label(for="card-num").form_field-name Номер карты
+										input(type="text" name="card-num" placeholder="4571 1234 5678 9012" id="card-num").form_text-field
+									.form_field-wrapper.payment-form_card-date
+										label(for="card-date").form_field-name Срок действия
+										input(type="text" name="card-date" placeholder="09/22" id="card-date").form_text-field
+									.form_field-wrapper.payment-form_card-cvc
+										label(for="card-cvc").form_field-name CVC
+										input(type="text" name="card-cvc" placeholder="666" id="card-cvc").form_text-field
+										span.form_field-notify 3 цифры на обороте
+
+								.payment-form_col
+									.payment-form_wallet-img
+										img(src="media/img/wallet.png", alt="")
+									p.payment-form_info.
+										Платёж безопасен. Мы не храним данные карт. Все 
+										операции проводит платёжная система, 
+										сертифицированная по международному стандарту 
+										безопасности PCI DSS.
+
+							.payment-form#payment-offline
+								.form_field-wrapper.payment-form_change-amount
+									label(for="payment-change-amount").form_field-name С какой суммы подготовить сдачу?
+									input(type="text" name="change-amount" id="payment-change-amount").form_text-field
+									a(href="#").form_field-notify Без сдачи
+
+							p#payment-card Курьер возьмёт с собой терминал для оплаты картой
+
+		.l-cart-page_aside
+			.checkout
+				.content-block
+					.content-block_header
+						b.content-block_title Детали заказа
+						a(href="#").content-block_header-back Изменить
+
+					.content-block_content
+							ul.checkout_products
+								li.checkout_product
+									.checkout_product-img
+										img(src="media/img-p/item-1.jpg", alt="")
+									.checkout_product-info
+										b.checkout_product-name Бургер
+										b.checkout_product-price 50 <i class="fas fa-ruble-sign"></i>
+										span.checkout_product-quantity 10 шт.
+
+								li.checkout_product
+									.checkout_product-img
+										img(src="media/img-p/item-1.jpg", alt="")
+									.checkout_product-info
+										b.checkout_product-name Бургер
+										b.checkout_product-price 50 <i class="fas fa-ruble-sign"></i>
+										span.checkout_product-quantity 10 шт.
+
+								li.checkout_product
+									.checkout_product-img
+										img(src="media/img-p/item-1.jpg", alt="")
+									.checkout_product-info
+										b.checkout_product-name Бургер
+										b.checkout_product-price 50 <i class="fas fa-ruble-sign"></i>
+										span.checkout_product-quantity 10 шт.
+								
+							ul.checkout_totals
+								li.checkout_totals-item
+									span.checkout_totals-name Сумма
+									b.checkout_totals-price 2 685 <i class="fas fa-ruble-sign"></i>
+								li.checkout_totals-item
+									span.checkout_totals-name Доставка курьером
+									b.checkout_totals-price.__green бесплатно
+								li.checkout_totals-item
+									span.checkout_totals-name Скидка по промокоду
+									b.checkout_totals-price.__red -100 <i class="fas fa-ruble-sign"></i>
+								li.checkout_totals-item
+									span.checkout_totals-name Итого к оплате
+									b.checkout_totals-price 2 585 <i class="fas fa-ruble-sign"></i>
+
+					.content-block_foo
+						button(type="submit" form="order-form").btn.__w-100p.__solid Подтвердить заказ
+
+				span.form_field-notify.__align-c.
+					Нажав «Подтвердить заказ», вы соглашаетесь 
+					на обработку персональных данных.

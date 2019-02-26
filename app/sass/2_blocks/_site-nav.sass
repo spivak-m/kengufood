@@ -1,0 +1,97 @@
+.site-nav
+
+	&.__at-foo
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+
+		.site-nav_list
+			color: #cecece
+			font-size: 1.125rem
+			flex-direction: column
+			text-align: left
+			margin-right: 100px
+
+			&:last-child
+				margin-right: 0
+
+		.site-nav_item
+			margin-bottom: 6px
+			color: #fff
+
+		.site-nav_item:first-child
+			font-size: 1rem
+			color: #888
+			pointer-events: none
+			margin-bottom: 12px
+
+.site-nav_list
+	padding: 0
+	margin: 0
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	list-style: none
+
+.site-nav_item
+	margin-right: 15px
+
+	&:last-child
+		margin-right: 0
+	
+	a
+		text-decoration: none
+		color: inherit
+
+		&:hover
+			opacity: .8
+
+@media screen and (max-width: 940px)
+	.site-nav
+
+		&.__at-foo
+			flex-direction: column
+
+			.site-nav_list
+				width: 100%
+				max-width: 320px
+				margin: 0
+				flex-direction: row
+				flex-wrap: wrap
+				position: relative
+				padding-top: 25px
+				padding-bottom: 18px
+				font-size: 1.142rem
+				
+				&:first-child
+					margin-bottom: 18px
+
+					&::before
+						content: ""
+						display: block
+						position: absolute
+						bottom: 0
+						width: calc(100vw - 12px)
+						height: 1px
+						margin-left: -12px
+						background-color: #515151
+
+				&:last-child
+					padding-bottom: 0
+
+			.site-nav_item
+				width: 50%
+				flex-shrink: 0
+				flex-grow: 0
+				margin-right: 0
+
+				&:first-child
+					position: absolute
+					top: 0
+					left: 0
+
+

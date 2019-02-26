@@ -1,0 +1,27 @@
+.modal
+	.modal_container.__sign-in#sign-in
+		.modal_content
+			h2.section-title.__at-modal Вход на сайт
+
+			p.
+				Просматривайте историю своих покупок 
+				и добавляйте любимые адреса, чтобы не 
+				указывать их в следующий раз
+
+			form(action="#" method="post").form
+				.form_field-wrapper
+					label(for="tel").form_field-name Номер телефона
+					input(type="text" name="tel" id="tel" placeholder="+7 999 999-99-99").form_text-field
+					a(href="#").form_field-notify Указать другой номер
+
+				.form_field-wrapper
+					label(for="tel").form_field-name Код подтверждения
+					input(type="text" name="tel" id="tel").form_text-field
+					a(href="#").form_field-notify Отправить еще раз через <b>50</b> сек
+
+				.form_actions
+					button(type="submit").btn.__solid.__align-c Продолжить
+
+		a(href="#").modal_close
+
+	.modal_overlay

@@ -1,0 +1,71 @@
+extends ../0_base/template
+
+block title
+	title Корзина
+
+block content
+	.l-wrapper.__w-1165
+		.l-cart-page
+			.l-cart-page_content
+				.content-block
+					.content-block_header
+						b.content-block_title В корзине 17 товаров
+
+					.content-block_content.__no-pdg
+						+cartCard()
+						+cartCard()
+						+cartCard()
+						+cartCard()
+
+			.l-cart-page_aside
+				.checkout
+					.content-block
+						.content-block_header
+							b.content-block_title Детали заказа
+
+						.content-block_content
+							ul.checkout_info
+								li.checkout_info-item.__courier
+									b Доставка курьером
+									span бесплатно при заказе от 350 <i class="fas fa-ruble-sign"></i>
+								li.checkout_info-item.__self
+									b Самовывоз
+									span бесплатно
+								li.checkout_info-item.__pay
+									b Оплата
+									span картой онлайн, наличными при получении, терминал
+
+							form(action="#" method="post").form.checkout_promocode
+								input(type="text" name="promocode" placeholder="Промокод на скидку").form_text-field.checkout_promocode-input
+								button(type="submit").checkout_promocode-submit <i class="fas fa-arrow-right"></i>
+								
+							ul.checkout_totals
+								li.checkout_totals-item
+									span.checkout_totals-name Сумма
+									b.checkout_totals-price 2 685 <i class="fas fa-ruble-sign"></i>
+								li.checkout_totals-item
+									span.checkout_totals-name Доставка курьером
+									b.checkout_totals-price.__green бесплатно
+								li.checkout_totals-item
+									span.checkout_totals-name Скидка по промокоду
+									b.checkout_totals-price.__red -100 <i class="fas fa-ruble-sign"></i>
+								li.checkout_totals-item
+									span.checkout_totals-name Итого к оплате
+									b.checkout_totals-price 2 585 <i class="fas fa-ruble-sign"></i>
+
+						.content-block_foo
+							a(href="#").btn.__w-100p.__solid Оформить заказ
+
+		.l-section
+			.l-section_header
+				h2.section-title Рекомендуем
+
+			.reccomend.owl-carousel.owl-custom-theme.js-owl-reccomend
+				+productBurger()
+				+productDesert()
+				+productPizza()
+				+productDrink()
+				+productBurger()
+				+productDesert()
+				+productPizza()
+				+productDrink()

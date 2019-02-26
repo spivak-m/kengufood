@@ -1,0 +1,183 @@
+.history-card
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	padding: 30px 20px
+	border-bottom: 1px solid #ececec
+
+	&:hover
+		background-color: #fbfbfb
+
+	&:last-child
+		border-bottom: none
+		border-radius: 0 0 10px 10px
+
+.history-card_status
+	width: calc(20% - 20px)
+	margin-right: 20px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+
+.history-card_status-label
+	font-size: .937rem
+	line-height: 1
+	border-radius: 3px
+	padding: 8px 10px
+
+	&.__done
+		background-color: #eaf9ea
+		color: #35c332
+
+	&.__in-progres
+		background-color: #fff3e5
+		color: #fe8900
+
+	&.__cancelled
+		background-color: #f5e7e7
+		color: #c33239
+
+.history-card_info
+	width: calc(20% - 20px)
+	margin-right: 20px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+
+.history-card_order-num
+	font-size: 1.125rem
+
+.history-card_order-date
+	color: #888
+
+.history-card_product-list
+	width: calc(30% - 20px)
+	margin: 0
+	margin-right: 20px
+	padding: 0
+	list-style: none
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+
+.history-card_product-item
+	position: relative
+	width: 40px
+	height: 40px
+	line-height: 0
+	flex-shrink: 0
+	margin-left: -12px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+
+	&:first-child
+		margin-left: 0
+
+	&:nth-child(6)
+		border: none
+		margin-left: -6px
+		font-size: 1.125rem
+		color: #888
+
+	&:hover > .product-popup
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+
+.history-card_product-more
+	text-decoration: none
+	color: inherit
+
+.history-card_product-preview
+	border: 2px solid rgba(200,200,200, .6)
+	border-radius: 50%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	overflow: hidden
+	
+	&:hover
+		border-color: rgba(200,200,200, 1)
+
+	img
+		width: 100%
+		height: auto
+
+.history-card_total-price
+	width: calc(15% - 20px)
+	margin-right: 20px
+	font-size: 1.5rem
+
+	i
+		font-size: 1rem
+
+.history-card_repeat
+	width: auto
+
+@media screen and (max-width: 940px)
+	.history-card
+		flex-direction: column
+		padding: 20px
+		align-items: center
+
+		&:hover
+			background-color: inherit
+
+		> *
+			width: auto
+			max-width: 100%
+			margin-right: 0
+			margin-left: 0
+
+	.history-card_info
+		text-align: center
+		margin-bottom: 18px
+
+		b
+			font-size: 1.142rem
+
+	.history-card_status
+		order: 1
+		margin-bottom: 20px
+
+	.history-card_status-label
+		font-size: 1.071rem
+
+	.history-card_product-list
+		order: 2
+		margin-bottom: 30px
+		width: 100%
+		justify-content: center
+		position: relative
+
+	.history-card_product-item
+		position: static
+
+	.history-card_total-price
+		display: none
+
+	.history-card_repeat
+		order: 3

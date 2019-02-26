@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Корзина</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/libs/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="css/libs/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/libs/owl.theme.custom.min.css"/>
+    <script src="js/libs/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@1.7.8/jquery.formstyler.min.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header_m-menu-btn"><a class="m-menu-btn js-m-menu-btn" href="#m-menu"></a></div>
+      <div class="site-header_logo"><img src="media/img/site-logo.png" alt="Логотип сайта"/></div>
+      <div class="site-header_nav">
+        <nav class="site-nav">
+          <ul class="site-nav_list">
+            <li class="site-nav_item"><a href="#">Бургеры</a></li>
+            <li class="site-nav_item"><a href="#">Пицца</a></li>
+            <li class="site-nav_item"><a href="#">Десерты</a></li>
+            <li class="site-nav_item"><a href="#">Напитки</a></li>
+            <li class="site-nav_item"><a href="#">Акции</a></li>
+            <li class="site-nav_item"><a href="#">Доставка</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-header_tel"><span>Номер для заказов</span><a>+7 (342) 429-92-66</a></div>
+      <div class="site-header_user-block">
+        <div class="user-block"><a class="user-block_item" href="#"><i class="fas fa-search"></i></a><a class="user-block_item mopen" href="#sign-in"><i class="fas fa-user-alt"></i></a><a class="user-block_item __cart" href="cart.html"><i class="fas fa-shopping-cart"></i>
+            <div class="user-block_cart-info"><span class="user-block_cart-price">2 685 <i class="fas fa-ruble-sign"></i></span><span class="user-block_cart-items">10 товаров</span></div></a></div>
+      </div>
+      <div class="m-menu" id="m-menu">
+        <ul class="m-menu_list">
+          <li class="m-menu_list-item"><a href="#">Kengu Food</a></li>
+          <li class="m-menu_list-item"><a href="#">Акции</a></li>
+          <li class="m-menu_list-item"><a href="#">Контакты</a></li>
+          <li class="m-menu_list-item"><a href="#">О нас</a></li>
+        </ul><a class="btn __solid __align-c mopen" href="#sign-in">Личный кабинет</a>
+        <ul class="m-menu_info __first">
+          <li class="m-menu_info-item"><span>Готовим заказы по адресу</span><b>г. Березники, пр. Ленина, 71</b></li>
+        </ul>
+        <ul class="m-menu_info __second">
+          <li class="m-menu_info-item"><span>Номер для заказов</span><b>+7 (999) 999-99-99</b></li>
+          <li class="m-menu_info-item"><span>Работаем для вас</span><b>с 8:00 до 21:00</b></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="l-wrapper __w-1165 l-cart-page">
+        <div class="l-cart-page_content">
+          <form class="form" action="#" method="post" id="order-form">
+            <div class="content-block">
+              <div class="content-block_header"><b class="content-block_title">Информация о заказе</b></div>
+              <div class="content-block_content">
+                <div class="recipient-form">
+                  <div class="form_field-wrapper">
+                    <label class="form_field-name" for="recipient-name">Имя</label>
+                    <input class="form_text-field" type="text" name="recipient-name" placeholder="Имя получателя" id="recipient-name"/>
+                  </div>
+                  <div class="form_field-wrapper">
+                    <label class="form_field-name" for="recipient-tel">Номер телефона</label>
+                    <input class="form_text-field" type="tel" name="recipient-tel" placeholder="+7 999 999-99-99" id="recipient-tel" disabled="disabled"/><a class="form_field-notify" href="#">Указать другой номер телефона</a>
+                  </div>
+                  <div class="form_field-wrapper recipient-form_coocking-time"><b class="form_field-name">Приготовить</b>
+                    <div class="form_select-wrapper">
+                      <select class="form_select" name="cooking-time">
+                        <option value="fast">Как можно скорее</option>
+                        <option value="fast">Как можно дольше</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-block">
+              <div class="content-block_header"><b class="content-block_title">Способ доставки</b></div>
+              <div class="content-block_content">
+                <div class="delivery-choise js-form-tabs">
+                  <input type="hidden" name="delivery-choise" value="courier"/><a class="delivery-choise_variant __courier __is-active" href="#delivery-courier" data-value="courier"><b>Доставка курьером</b><span>Среднее время доставки заказа составляет 1 час</span></a><a class="delivery-choise_variant __self" href="#delivery-self" data-value="self"><b>Самовывоз</b><span>г. Березники, ул. Ленина, 71 <br>08:00 – 21:00</span></a>
+                </div>
+                <div class="delivery-form" id="delivery-courier">
+                  <div class="delivery-form_row">
+                    <div class="form_field-wrapper delivery-form_field __3-4 __m-1-1">
+                      <label class="form_field-name" for="delivery-street">Улица</label>
+                      <input class="form_text-field" type="text" name="delivery-street" placeholder="Напишите название улицы" id="delivery-street"/>
+                    </div>
+                    <div class="form_field-wrapper delivery-form_field __1-4 __m-1-2">
+                      <label class="form_field-name" for="delivery-house">Дом</label>
+                      <input class="form_text-field" type="text" name="delivery-house" placeholder="Номер дома" id="delivery-house"/>
+                    </div>
+                  </div>
+                  <div class="delivery-form_row">
+                    <div class="form_field-wrapper delivery-form_field __1-4 __m-1-2">
+                      <label class="form_field-name" for="delivery-apartment">Квартира</label>
+                      <input class="form_text-field" type="text" name="delivery-apartment" placeholder="№ квартиры" id="delivery-apartment"/>
+                    </div>
+                    <div class="form_field-wrapper delivery-form_field __1-4 __m-1-2">
+                      <label class="form_field-name" for="delivery-entrance">Подъезд</label>
+                      <input class="form_text-field" type="text" name="delivery-entrance" placeholder="Номер подъезда" id="delivery-entrance"/><span class="form_field-notify">Необязательное поле</span>
+                    </div>
+                    <div class="form_field-wrapper delivery-form_field __1-4 __m-1-2">
+                      <label class="form_field-name" for="delivery-door-code">Код двери</label>
+                      <input class="form_text-field" type="text" name="delivery-door-code" placeholder="Код домофона" id="delivery-door-code"/><span class="form_field-notify">Необязательное поле</span>
+                    </div>
+                    <div class="form_field-wrapper delivery-form_field __1-4 __m-1-2">
+                      <label class="form_field-name" for="delivery-floor">Этаж</label>
+                      <input class="form_text-field" type="text" name="delivery-floor" placeholder="Номер этажа" id="delivery-floor"/><span class="form_field-notify">Необязательное поле</span>
+                    </div>
+                  </div>
+                  <div class="form_field-wrapper delivery-form_field __1-1 __m-1-1">
+                    <label class="form_field-name" for="delivery-comment">Комментарий</label>
+                    <textarea class="form_text-field" rows="6" name="delivery-comment" placeholder="Комментарий к заказу" id="delivery-comment"></textarea><span class="form_field-notify">Необязательное поле</span>
+                  </div>
+                </div>
+                <div id="delivery-self">
+                  <p>
+                    Вы можете сами забрать заказ, по адресу: г. Березники, ул. Ленина 71.<br>
+                    Мы работаем ежедневно с 08:00 до 21:00
+                    
+                  </p>
+                  <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8116.463079891009!2d56.8057862!3d59.4311437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xadfe940d71e8899e!2z0KLQpiDQmtC10L3Qs9GD!5e0!3m2!1sru!2sru!4v1542872717546" width="600" height="400" frameborder="0" style="border:0" allowfullscreen="allowfullscreen"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-block">
+              <div class="content-block_header"><b class="content-block_title">Способ оплаты</b></div>
+              <div class="content-block_content">
+                <div class="payment-choise js-form-tabs">
+                  <input type="hidden" name="payment-choise" value="online"/><a class="payment-choise_variant __online __is-active" href="#payment-online" data-value="online"><b>Картой на сайте</b><span>Оплатите заказ на сайте</span></a><a class="payment-choise_variant __offline" href="#payment-offline" data-value="offline"><b>Наличные</b><span>Наличными курьеру</span></a><a class="payment-choise_variant __card" href="#payment-card" data-value="card"><b>Картой курьеру</b><span>Оплата картой курьеру</span></a>
+                </div>
+                <div class="payment-choise_content">
+                  <div class="payment-form" id="payment-online">
+                    <div class="payment-form_col">
+                      <div class="form_field-wrapper payment-form_card-num">
+                        <label class="form_field-name" for="card-num">Номер карты</label>
+                        <input class="form_text-field" type="text" name="card-num" placeholder="4571 1234 5678 9012" id="card-num"/>
+                      </div>
+                      <div class="form_field-wrapper payment-form_card-date">
+                        <label class="form_field-name" for="card-date">Срок действия</label>
+                        <input class="form_text-field" type="text" name="card-date" placeholder="09/22" id="card-date"/>
+                      </div>
+                      <div class="form_field-wrapper payment-form_card-cvc">
+                        <label class="form_field-name" for="card-cvc">CVC</label>
+                        <input class="form_text-field" type="text" name="card-cvc" placeholder="666" id="card-cvc"/><span class="form_field-notify">3 цифры на обороте</span>
+                      </div>
+                    </div>
+                    <div class="payment-form_col">
+                      <div class="payment-form_wallet-img"><img src="media/img/wallet.png" alt=""/></div>
+                      <p class="payment-form_info">
+                        Платёж безопасен. Мы не храним данные карт. Все 
+                        операции проводит платёжная система, 
+                        сертифицированная по международному стандарту 
+                        безопасности PCI DSS.
+                        
+                      </p>
+                    </div>
+                  </div>
+                  <div class="payment-form" id="payment-offline">
+                    <div class="form_field-wrapper payment-form_change-amount">
+                      <label class="form_field-name" for="payment-change-amount">С какой суммы подготовить сдачу?</label>
+                      <input class="form_text-field" type="text" name="change-amount" id="payment-change-amount"/><a class="form_field-notify" href="#">Без сдачи</a>
+                    </div>
+                  </div>
+                  <p id="payment-card">Курьер возьмёт с собой терминал для оплаты картой</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="l-cart-page_aside">
+          <div class="checkout">
+            <div class="content-block">
+              <div class="content-block_header"><b class="content-block_title">Детали заказа</b><a class="content-block_header-back" href="#">Изменить</a></div>
+              <div class="content-block_content">
+                <ul class="checkout_products">
+                  <li class="checkout_product">
+                    <div class="checkout_product-img"><img src="media/img-p/item-1.jpg" alt=""/></div>
+                    <div class="checkout_product-info"><b class="checkout_product-name">Бургер</b><b class="checkout_product-price">50 <i class="fas fa-ruble-sign"></i></b><span class="checkout_product-quantity">10 шт.</span></div>
+                  </li>
+                  <li class="checkout_product">
+                    <div class="checkout_product-img"><img src="media/img-p/item-1.jpg" alt=""/></div>
+                    <div class="checkout_product-info"><b class="checkout_product-name">Бургер</b><b class="checkout_product-price">50 <i class="fas fa-ruble-sign"></i></b><span class="checkout_product-quantity">10 шт.</span></div>
+                  </li>
+                  <li class="checkout_product">
+                    <div class="checkout_product-img"><img src="media/img-p/item-1.jpg" alt=""/></div>
+                    <div class="checkout_product-info"><b class="checkout_product-name">Бургер</b><b class="checkout_product-price">50 <i class="fas fa-ruble-sign"></i></b><span class="checkout_product-quantity">10 шт.</span></div>
+                  </li>
+                </ul>
+                <ul class="checkout_totals">
+                  <li class="checkout_totals-item"><span class="checkout_totals-name">Сумма</span><b class="checkout_totals-price">2 685 <i class="fas fa-ruble-sign"></i></b></li>
+                  <li class="checkout_totals-item"><span class="checkout_totals-name">Доставка курьером</span><b class="checkout_totals-price __green">бесплатно</b></li>
+                  <li class="checkout_totals-item"><span class="checkout_totals-name">Скидка по промокоду</span><b class="checkout_totals-price __red">-100 <i class="fas fa-ruble-sign"></i></b></li>
+                  <li class="checkout_totals-item"><span class="checkout_totals-name">Итого к оплате</span><b class="checkout_totals-price">2 585 <i class="fas fa-ruble-sign"></i></b></li>
+                </ul>
+              </div>
+              <div class="content-block_foo">
+                <button class="btn __w-100p __solid" type="submit" form="order-form">Подтвердить заказ</button>
+              </div>
+            </div><span class="form_field-notify __align-c">
+              Нажав «Подтвердить заказ», вы соглашаетесь 
+              на обработку персональных данных.</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-foo">
+      <div class="site-foo_first">
+        <div class="site-foo_col"><a class="site-foo_logo" href="index.html"><img src="media/img/site-logo.png" alt=""/></a>
+          <p class="site-foo_text">
+            Ресторан доставки быстрого
+            питания в городе Березники.
+            Доставка в течение часа.
+            
+          </p>
+          <div class="site-foo_social">
+            <div class="social"><a class="social_item" href="#"><i class="fab fa-vk"></i></a><a class="social_item" href="#"><i class="fab fa-instagram"></i></a><a class="social_item" href="#"><i class="fas fa-at"></i></a></div>
+          </div>
+        </div>
+        <div class="site-foo_col">
+          <nav class="site-nav __at-foo">
+            <ul class="site-nav_list">
+              <li class="site-nav_item"><a href="#">Меню</a></li>
+              <li class="site-nav_item"><a href="#">Бургеры</a></li>
+              <li class="site-nav_item"><a href="#">Пицца</a></li>
+              <li class="site-nav_item"><a href="#">Десерты</a></li>
+              <li class="site-nav_item"><a href="#">Напитки</a></li>
+            </ul>
+            <ul class="site-nav_list">
+              <li class="site-nav_item"><a href="#">Kengu Food</a></li>
+              <li class="site-nav_item"><a href="#">О нас</a></li>
+              <li class="site-nav_item"><a href="#">Акции</a></li>
+              <li class="site-nav_item"><a href="#">Вакансии</a></li>
+              <li class="site-nav_item"><a href="#">Доставка и оплата</a></li>
+              <li class="site-nav_item"><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="site-foo_col">
+          <div class="site-foo_info">
+            <ul class="site-foo_info-col">
+              <li class="site-foo_info-item"><span>Готовим заказы по адресу</span><b>г. Березники, пр. Ленина, 71</b></li>
+            </ul>
+            <ul class="site-foo_info-col">
+              <li class="site-foo_info-item"><span>Номер для заказов</span><b><a href="#">+7 (999) 999-99-99</a></b></li>
+              <li class="site-foo_info-item"><span>Работаем для вас</span><b>с 8:00 до 21:00</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="site-foo_second">
+        <div class="site-foo_copyright"><span>&#169; 2017-2018г. Все права Защищены.</span><span>Разработка сайта <a href="#">PROSTOR design</a></span></div>
+      </div>
+    </footer>
+    <div class="modal">
+      <div class="modal_container __sign-in" id="sign-in">
+        <div class="modal_content">
+          <h2 class="section-title __at-modal">Вход на сайт</h2>
+          <p>
+            Просматривайте историю своих покупок 
+            и добавляйте любимые адреса, чтобы не 
+            указывать их в следующий раз
+            
+          </p>
+          <form class="form" action="#" method="post">
+            <div class="form_field-wrapper">
+              <label class="form_field-name" for="tel">Номер телефона</label>
+              <input class="form_text-field" type="text" name="tel" id="tel" placeholder="+7 999 999-99-99"/><a class="form_field-notify" href="#">Указать другой номер</a>
+            </div>
+            <div class="form_field-wrapper">
+              <label class="form_field-name" for="tel">Код подтверждения</label>
+              <input class="form_text-field" type="text" name="tel" id="tel"/><a class="form_field-notify" href="#">Отправить еще раз через <b>50</b> сек</a>
+            </div>
+            <div class="form_actions">
+              <button class="btn __solid __align-c" type="submit">Продолжить</button>
+            </div>
+          </form>
+        </div><a class="modal_close" href="#"></a>
+      </div>
+      <div class="modal_overlay"></div>
+    </div>
+    <div class="cart-notify __is-show js-cartNotify">
+      <div class="cart-notify_img"><img src="media/img-p/item-1.jpg" alt=""/></div>
+      <div class="cart-notify_info"><b class="cart-notify_product-name">Чикенбургер</b><span class="cart-notify_msg">добавлен в корзину</span><a class="cart-notify_to-cart" href="#">Перейти к корзине</a></div><a class="cart-notify_close" href="#"></a>
+    </div>
+    <script src="js/libs/modal.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

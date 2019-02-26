@@ -1,0 +1,63 @@
+.content-block
+	width: 100%
+	border: 1px solid #ececec
+	border-radius: 10px
+	margin-bottom: 30px
+
+	&:last-child
+		margin-bottom: 0
+
+.content-block_header,
+.content-block_foo
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	padding: 18px 20px
+	background-color: #fbfbfb
+
+.content-block_header
+	border-bottom: 1px solid #ececec
+	border-radius: 10px 10px 0 0
+	align-items: center
+
+.content-block_foo
+	border-top: 1px solid #ececec
+	border-radius: 0 0 10px 10px
+
+.content-block_title
+	font-size: .875rem
+	line-height: 1
+	text-transform: uppercase
+	color: #7b7b7b
+
+.content-block_header-back
+	color: #888	
+	font-size: .875rem
+	text-decoration: none
+	line-height: 1
+	margin-left: auto
+
+.content-block_content
+	padding: 18px 20px
+
+	&.__no-pdg
+		padding: 0
+
+@media screen and (max-width: 940px)
+	.content-block
+		width: calc(100% - 20px)
+		margin-right: auto
+		margin-left: auto
+
+	.content-block_header,
+	.content-block_foo
+		padding-left: 10px
+		padding-right: 10px
+
+	.content-block_title
+		font-size: 1rem
+
+	.content-block_content
+		padding: 15px 10px

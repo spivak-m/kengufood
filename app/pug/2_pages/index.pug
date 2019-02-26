@@ -1,0 +1,98 @@
+extends ../0_base/template
+
+block title
+	title Kengu Food
+
+block content
+	.promo.owl-carousel.owl-theme.js-banner
+		.promo_item
+			img(src="media/img-p/banner-1.jpg" alt="")
+
+		.promo_item
+			img(src="media/img-p/banner-1.jpg" alt="")
+
+	.l-section
+		.l-section_header
+			h2.section-title Бургеры
+
+		.l-section_item-list
+			.l-section_item: +productBurger().__new
+			.l-section_item: +productBurger().__top
+			.l-section_item: +productBurger().__sale
+			.l-section_item: +productBurger()
+			.l-section_item: +productBurger()
+			.l-section_item: +productBurger()
+			.l-section_item: +productBurger()
+			.l-section_item: +productBurger()
+
+	.l-section
+		.l-section_header
+			h2.section-title Пицца
+
+		.l-section_item-list
+			.l-section_item: +productPizza()
+			.l-section_item: +productPizza()
+			.l-section_item: +productPizza()
+			.l-section_item: +productPizza()
+			.l-section_item: +productPizza()
+
+	.l-section
+		.l-section_header
+			h2.section-title Десерты
+
+		.l-section_item-list
+			.l-section_item: +productDesert()
+			.l-section_item: +productDesert()
+			.l-section_item: +productDesert()
+			.l-section_item: +productDesert()
+
+	.l-section
+		.l-section_header
+			h2.section-title Напитки
+
+		.l-section_item-list
+			.l-section_item: +productDrink()
+			.l-section_item: +productDrink()
+			.l-section_item: +productDrink()
+			.l-section_item: +productDrink()
+			.l-section_item: +productDrink()
+			.l-section_item: +productDrink()
+
+	.l-section
+		.l-section_header
+			h2.section-title Доставка и оплата
+
+		.l-section_item-list.__info
+			.l-section_item
+				.info-card
+					b.info-card_title Доставка
+					p.info-card_text.
+						Доставка на дом работает 24 часа в сутки 7 
+						дней в неделю, включая праздники, а карта 
+						доставки покрывает всю территорию 
+						Березников и ряда ближайших городов. 
+						Заявки принимаются онлайн – процесс выбора 
+						и подтверждения заказа занимает несколько 
+						минут.
+
+			.l-section_item
+				.info-card
+					b.info-card_title Оплата
+					p.info-card_text.
+						Вы можете оплатить заказ онлайн или при 
+						получении,  наличными или картой
+
+			.l-section_item
+				.info-card
+					b.info-card_title Подтверждение заказа
+					p.info-card_text.
+						Заказ, оформленный на сайте, 
+						подтверждается после устного согласия 
+						клиента. Если Вам не перезвонил оператор в 
+						течение 10 минут после оформления заказа, 
+						рекомендуем оформить его повторно или 
+						связаться с нами по телефону.
+
+			.l-section_item
+				.promo-card
+					img(src="media/img-p/promo-1.jpg", alt="")
